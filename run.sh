@@ -1,7 +1,7 @@
 #!/bin/bash
 
 rm images/*
-phantomjs animation.js
+phantomjs index.js
 for l in $(ls images/*.svg)
 do
     convert $l $l.png
