@@ -5,8 +5,9 @@ page.viewportSize = { width: 1920, height: 1080 };
 //##################### DEFAULT VALUE #########################################
 // You can modify them if you need/want to.
 var url = './index.html'; //URL of the html page where the <svg> tag with id="svg" that we want to record is.
-var nb_seconds = 2; // Number of seconds the script will record svg.
-var framerate = 48; // The number of svg per second the script will try to record.
+url = "https://demo.vizuall.fr/"
+var nb_seconds = 5; // Number of seconds the script will record svg.
+var framerate = 60; // The number of svg per second the script will try to record.
 var base_directory = "./images" // The directory where the svg files will be written.
 
 
@@ -21,6 +22,7 @@ function getSVG()
     return page.evaluate(function(){
         var serializer = new XMLSerializer();
         var element = document.getElementById("svg");
+        console.log('serializer.serializeToString(element)',serializer.serializeToString(element))
         return serializer.serializeToString(element)
     });
 }
@@ -38,7 +40,7 @@ page.onInitialized = function() {
             xml = getSVG();    
 
             fs.write(base_directory+"/image_"+pad(frame, 3)+".svg"
-                    ,"<?xml version=\"1.0\"?>"+xml,
+                    ,xml,
                     "w");
 
             if(frame >= nb_seconds*framerate)
