@@ -1,0 +1,74 @@
+#menuRight {
+    background-color: #FA7859;
+    color: #F7D0A7;
+    position: absolute;
+    right: -100%;
+    height: 100vh;
+    font-family: 'Manrope';
+    padding: 50px 30px;
+
+
+    #title {
+        font-size: 74px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 101px;
+        letter-spacing: 0em;
+        text-align: left;
+        opacity: 0%;
+    }
+
+    #band {
+        width: 100%;
+        height: 0px;
+
+        border: 7px solid #F7D0A7;
+        opacity: 0%;
+    }
+
+    #data {
+        font-family: Manrope;
+        font-size: 134px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 183px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        opacity: 70%;
+
+        margin-top: 100px;
+
+        position: relative;
+        top: -100%;
+
+    }
+
+    #dataCom {
+        font-family: Manrope;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        opacity: 70%;
+
+        position: relative;
+        top: -100%;
+    }
+
+    #commentaire {
+        font-family: Manrope;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 38px;
+        letter-spacing: 0em;
+        text-align: left;
+        
+        position: relative;
+        top: 100%;
+    }
+}
