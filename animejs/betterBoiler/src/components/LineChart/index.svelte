@@ -92,6 +92,7 @@
     <svg  transform="translate({margin.left}, {margin.top})" width={width} height={height}>
         <g>
             <path 
+                class="motion-path delay-500"
                 bind:this={el}
                 d="{path(data) || ""}"
                 fill="none"
